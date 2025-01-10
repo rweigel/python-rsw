@@ -1,6 +1,10 @@
 import tensorflow as tf
 
+# Use CPU by setting GPU to empty list
+# CPU is ~600 ms/step but starts faster
+# GPU is ~400 ms/step
 #tf.config.set_visible_devices([], "GPU")
+
 cifar = tf.keras.datasets.cifar100
 (x_train, y_train), (x_test, y_test) = cifar.load_data()
 model = tf.keras.applications.ResNet50(
