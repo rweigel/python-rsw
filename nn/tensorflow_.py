@@ -1,15 +1,15 @@
 import tensorflow as tf
 
-# Use CPU by setting GPU to empty list
+
 
 # On Mac M3 Max (16 CPU cores, 128 GB RAM and 40 GPU cores) and TensorFlow 2.18.0
 #   CPU is ~600 ms/step but starts faster
 #   GPU is ~400 ms/step
-# On JHU/APL's mollie RedHat AMD Epic 7262 (8 CPU cores, 32 GB RAM) with TensorFlow 2.13.1
+# On JHU/APL's mollie RedHat 2 AMD Epyc 7262 processors (8 CPU cores/processor => 16 physical cores; 32 w/ hyperthreading, 256 GB RAM) with TensorFlow 2.13.1
 #   CPU is ~1500 ms/step
 #   GPU - was not able to run
 
-#Default is CPU
+# Use CPU by setting GPU to empty list
 #tf.config.set_visible_devices([], "GPU")
 
 cifar = tf.keras.datasets.cifar100
